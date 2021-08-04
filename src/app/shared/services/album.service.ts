@@ -22,6 +22,7 @@ export class AlbumService {
 //       { headers: jwtHeaders }
 //     );
 //     return data.toPromise(); 
-    return this.http.get<AlbumModel[]>(this.authentificationUrls.getAllAlbumAsyncUrl);
+    return this.http.get<AlbumModel[]>(
+        this.authentificationUrls.getAllAlbumAsyncUrl);
   }
 }

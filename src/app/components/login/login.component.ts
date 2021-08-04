@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
       this.inputIsNotValid = false;
       this.isLoading = true;
       this.authService.login(this.userLogin).subscribe(res => {
-        // this.indexedDBService.putUserAccessValues(this.userLogin.login, res);
-        // localStorage.setItem('AdministrationLoggedIn', 'true');
+        this.indexedDBService.putUserAccessValues(this.userLogin.login, res);
+        localStorage.setItem('AdministrationLoggedIn', 'true');
         this.router.navigate(['/accueil/']);
         this.isLoading = false;
       } ,

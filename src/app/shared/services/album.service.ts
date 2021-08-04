@@ -15,11 +15,13 @@ export class AlbumService {
   }
 
   async getAll() {
-    const jwtHeaders = await this.authService.getTokenJwt();
-    const data = this.http.get<AlbumModel[]>(
-      this.authentificationUrls.getAllAlbumAsyncUrl,
-      { headers: jwtHeaders }
-    );
-    return data.toPromise();
+    // connexion avec token mais puisqu'il y a un problème de connexion j'ai modifié le code
+//     const jwtHeaders = await this.authService.getTokenJwt();
+//     const data = this.http.get<AlbumModel[]>(
+//       this.authentificationUrls.getAllAlbumAsyncUrl,
+//       { headers: jwtHeaders }
+//     );
+//     return data.toPromise(); 
+    return this.http.get<AlbumModel[]>(this.authentificationUrls.getAllAlbumAsyncUrl);
   }
 }

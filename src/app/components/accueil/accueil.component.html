@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+ <div class="container py-5">
+
+  <div class="box">
+    <div *ngFor="let item of albumListe  | paginate: { itemsPerPage: 8, currentPage: p }" >
+      <div class="card">
+        <img class="card-img-top" src="{{item.url}}">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="py-3">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>

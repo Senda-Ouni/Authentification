@@ -1,0 +1,19 @@
+.bg-image {
+  background: url(../../../assets/img/bg-01.jpg) right/cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.vertical-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  width: 380px;
+  padding: 40px 30px 50px 30px;
+  border-radius: 20px;
+  background-color: #2ac28e94;
+  color: white;
+  margin: auto;
+}
